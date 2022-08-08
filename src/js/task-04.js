@@ -1,11 +1,23 @@
-const counterValue = document.querySelector("#value")
-const decrementBtn = document.querySelector("#decrement")
-const incrementBtn = document.querySelector(".increment")
+const counterValue = document.querySelector('#value')
+const dectementBtn = document.querySelector('[data-action="decrement"]')
+const inctementBtn = document.querySelector('[data-action="increment"]')
+console.log(inctementBtn)
+const counter = {
+    value: 0,
+    increment() {
+        this.value += 1;
+    },
+    decrement() {
+        this.value -= 1;
+    },
+    
+}
 
-
-
-const handleClick = () => {
-  console.log("click event listener callback");
-};
-
-decrementBtn.addEventListener("click", handleClick);
+dectementBtn.addEventListener('click', function () {
+    counter.decrement();
+    counterValue.textContent = counter.value;
+});
+inctementBtn.addEventListener('click', function () {
+    counter.increment();
+    counterValue.textContent = counter.value;
+});
