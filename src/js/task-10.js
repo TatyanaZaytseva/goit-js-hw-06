@@ -10,7 +10,7 @@ boxes: document.querySelector('#boxes')
 
 refs.createBtn.addEventListener('click', createBoxes)
 function createBoxes(event) {
-  console.log(event.currentTarget.value)
+  console.log(event.target.value)
   const divBoxes = document.createElement('div')
   divBoxes.style.width = '30px'
   divBoxes.style.height = '30px'
