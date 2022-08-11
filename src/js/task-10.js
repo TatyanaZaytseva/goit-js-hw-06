@@ -12,9 +12,10 @@ refs.createBtn.addEventListener('click', () => {
   createBoxes(refs.input.value)
 })
 function createBoxes(amount) {
-   if (amount > 100) {
-    refs.input.value = 100;
-    return;
+   if (amount > 100 || amount<1) {
+     alert("Число повинно бути в межах від 1 до 100")
+     refs.input.value = ""
+    return
   }
   const boxesArray = [];
 
