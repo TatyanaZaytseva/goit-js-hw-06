@@ -5,7 +5,7 @@ const dataLength = inputEl.getAttribute('data-length')
 
 function onInputCheck(event) {
    
-    if (event.target.value.length <= dataLength) {
+    if (event.target.value.length == dataLength) {
         inputEl.classList.add('valid')
         inputEl.classList.remove('invalid')
     } else {
