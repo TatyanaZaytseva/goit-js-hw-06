@@ -8,9 +8,10 @@ destroyBtn: document.querySelector('[data-destroy]'),
 boxes: document.querySelector('#boxes')
 }
 
-refs.createBtn.addEventListener('click', () => {
+refs.createBtn.addEventListener('click',handleClick)
+function handleClick () {
   createBoxes(refs.input.value)
-})
+}
 function createBoxes(amount) {
    if (amount > 100 || amount<1) {
      alert("Число повинно бути в межах від 1 до 100")
